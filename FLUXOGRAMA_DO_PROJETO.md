@@ -2,6 +2,7 @@
 
 Atualizado em: 14/09/2026  
 Branch de trabalho: `codex/prototipo-painel-banco-dados`  
+Pull request: [#1 — Preparar baseline e diagnóstico do protótipo](https://github.com/cezararc-maker/Controle_Folha_de_Pagamento/pull/1)  
 Implantação definitiva: **NÃO APROVADA**
 
 ## Fluxo de trabalho
@@ -9,15 +10,23 @@ Implantação definitiva: **NÃO APROVADA**
 | Etapa | Situação | Resultado/Teste | Pendências | Aprovação definitiva |
 |---|---|---|---|---|
 | 0. Confirmar repositório | Concluída | Repositório único confirmado: `cezararc-maker/Controle_Folha_de_Pagamento`; padrão `main`; inicialmente vazio | Nenhuma | Não se aplica |
-| 1. Criar base recuperável | Concluída | Commit inicial criado em `main`; branch de trabalho criada | Nenhuma | Não se aplica |
+| 1. Criar base recuperável | Concluída | Commit inicial `e2e110b` em `main`; branch de trabalho criada | Nenhuma | Não se aplica |
 | 2. Receber planilha-fonte no GitHub | Bloqueada | Nenhuma pasta de trabalho existe no repositório | Adicionar a versão original, fechada no Excel, em `entrada/` | Não |
-| 3. Diagnóstico reproduzível | Preparada, não executada na fonte | Ferramenta somente leitura será adicionada e testada com arquivo sintético | Executar contra a planilha real e confrontar com o diagnóstico de referência | Não |
+| 3. Diagnóstico reproduzível | Ferramenta validada; fonte pendente | Compilação e 3 testes sintéticos aprovados no GitHub Actions, execução [#34878902794](https://github.com/cezararc-maker/Controle_Folha_de_Pagamento/actions/runs/34878902794) | Executar contra a planilha real e confrontar com o diagnóstico de referência | Não |
 | 4. Parametrizar origem | Pendente | Sem alteração | Identificar consulta, parâmetros e fonte real; remover caminho fixo sem alterar a lógica das nove colunas | Não |
 | 5. Lista de executores | Pendente | Sem alteração | Identificar tabela/coluna de origem e implementar seleção sem digitação livre | Não |
 | 6. Painel `Banco de Dados` | Pendente | Sem alteração | Quantificar impacto em `A1:I8`; deslocar tabela para linha 9 preservando objetos, fórmulas, estilos e vínculos | Não |
 | 7. Testes iniciais | Pendente | Sem alteração | Atualização com 57 registros; mês mais recente; cabeçalhos; nove colunas; logs sem caixas modais | Não |
 | 8. Versão limpa para distribuição | Fora desta etapa | Não iniciado | Definir formalmente o que será limpo e testar em cópia própria | Não |
-| 9. Validação do usuário | Pendente | Aguardará protótipo revisável | Validação expressa | Não |
+| 9. Validação do usuário | Pendente | PR em rascunho para revisão inicial | Validação expressa | Não |
+
+## Conteúdo atualmente versionado
+
+- documentação do estado, referência histórica, especificação, plano e matriz de testes;
+- instruções de inclusão da planilha-fonte;
+- diagnóstico Open XML somente leitura;
+- testes automatizados com arquivo sintético;
+- validação contínua em Python 3.11.
 
 ## Decisões preservadas
 
