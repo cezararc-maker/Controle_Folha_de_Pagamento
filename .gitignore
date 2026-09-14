@@ -1,0 +1,19 @@
+# Temporários do Excel
+~$*.xls*
+*.tmp
+
+# Saídas locais de diagnóstico
+diagnosticos/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Sistema/editor
+.DS_Store
+Thumbs.db
+.vscode/
